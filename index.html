@@ -3,513 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LP3I Goes to School</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LP3I Goes to School</title>
-        <style>
-            :root {
-                --primary-color: #141e68;
-                --primary-light: #2a357d;
-                --secondary-color: #f4f4f4;
-                --text-color: #333;
-                --accent-color: #ff6b00;
-                --border-radius: 8px;
-                --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            }
-    
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-    
-            body {
-                font-family: 'Segoe UI', 'Arial', sans-serif;
-                background-color: var(--secondary-color);
-                color: var(--text-color);
-                line-height: 1.6;
-                padding: 20px;
-            }
-    
-            .container {
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-    
-            header {
-                text-align: center;
-                margin-bottom: 30px;
-            }
-    
-            .logo {
-                max-width: 150px;
-                margin-bottom: 15px;
-            }
-    
-            h1 {
-                color: var(--primary-color);
-                font-weight: 700;
-                font-size: 28px;
-                margin-bottom: 10px;
-                padding: 15px;
-                border-radius: var(--border-radius);
-                background-color: white;
-                box-shadow: var(--box-shadow);
-            }
-    
-            .subtitle {
-                font-size: 16px;
-                color: #666;
-                margin-bottom: 20px;
-            }
-    
-            form {
-                background-color: white;
-                border: 2px solid var(--primary-color);
-                border-radius: var(--border-radius);
-                padding: 30px;
-                box-shadow: var(--box-shadow);
-                margin-bottom: 30px;
-            }
-    
-            .form-section {
-                margin-bottom: 25px;
-            }
-    
-            .section-title {
-                font-size: 18px;
-                color: var(--primary-color);
-                margin-bottom: 15px;
-                padding-bottom: 5px;
-                border-bottom: 2px solid var(--primary-color);
-            }
-    
-            .form-row {
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 15px;
-                align-items: center;
-            }
-    
-            .form-row:nth-child(odd) {
-                background-color: #f9f9f9;
-                padding: 10px;
-                border-radius: var(--border-radius);
-            }
-    
-            .form-label {
-                flex: 1;
-                min-width: 200px;
-                font-weight: 600;
-                margin-right: 15px;
-            }
-    
-            .form-input {
-                flex: 2;
-                min-width: 250px;
-            }
-    
-            input[type="text"],
-            input[type="email"],
-            input[type="date"],
-            input[type="tel"],
-            select {
-                width: 100%;
-                padding: 12px;
-                border: 1px solid #ddd;
-                border-radius: var(--border-radius);
-                font-size: 16px;
-                transition: all 0.3s ease;
-            }
-    
-            input[type="text"]:focus,
-            input[type="email"]:focus,
-            input[type="date"]:focus,
-            input[type="tel"]:focus,
-            select:focus {
-                border-color: var(--primary-color);
-                box-shadow: 0 0 0 3px rgba(20, 30, 104, 0.2);
-                outline: none;
-            }
-    
-            .date-group {
-                display: flex;
-                gap: 10px;
-            }
-    
-            .date-group input[type="text"] {
-                flex: 2;
-            }
-    
-            .date-group input[type="date"] {
-                flex: 1;
-            }
-    
-            fieldset {
-                border: 2px solid var(--primary-color);
-                padding: 20px;
-                border-radius: var(--border-radius);
-                margin-top: 30px;
-                background-color: #f9f9f9;
-            }
-    
-            legend {
-                background-color: var(--primary-color);
-                color: white;
-                padding: 8px 15px;
-                border-radius: var(--border-radius);
-                font-weight: 600;
-                font-size: 16px;
-            }
-    
-            .question {
-                margin-bottom: 20px;
-            }
-    
-            .question-text {
-                font-weight: 600;
-                margin-bottom: 10px;
-                color: var(--primary-color);
-            }
-    
-            .options {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 15px;
-                padding: 5px 0;
-            }
-    
-            .option-item {
-                display: flex;
-                align-items: center;
-                margin-right: 15px;
-                margin-bottom: 10px;
-            }
-    
-            input[type="checkbox"],
-            input[type="radio"] {
-                margin-right: 8px;
-                transform: scale(1.2);
-                accent-color: var(--primary-color);
-            }
-    
-            .other-option {
-                display: flex;
-                align-items: center;
-                margin-top: 10px;
-            }
-    
-            .other-option label {
-                margin-right: 10px;
-            }
-    
-            .other-option input[type="text"] {
-                width: 200px;
-            }
-    
-            .btn-container {
-                text-align: center;
-                margin-top: 30px;
-            }
-    
-            .btn {
-                background-color: var(--primary-color);
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                font-size: 16px;
-                border-radius: var(--border-radius);
-                cursor: pointer;
-                font-weight: 600;
-                transition: all 0.3s ease;
-            }
-    
-            .btn:hover {
-                background-color: var(--primary-light);
-                transform: translateY(-2px);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-    
-            .btn-reset {
-                background-color: #f4f4f4;
-                color: #333;
-                margin-right: 15px;
-                border: 1px solid #ddd;
-            }
-    
-            .btn-reset:hover {
-                background-color: #e6e6e6;
-            }
-    
-            .required::after {
-                content: " *";
-                color: red;
-            }
-    
-            footer {
-                text-align: center;
-                margin-top: 30px;
-                padding: 20px;
-                color: #666;
-                font-size: 14px;
-                background-color: white;
-                border-radius: var(--border-radius);
-                box-shadow: var(--box-shadow);
-            }
-    
-            /* Responsive design */
-            @media (max-width: 768px) {
-                .form-row {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-    
-                .form-label, .form-input {
-                    width: 100%;
-                    min-width: 100%;
-                }
-    
-                .form-label {
-                    margin-bottom: 5px;
-                }
-    
-                .date-group {
-                    flex-direction: column;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <h1>KUNJUNGAN LP3I BANDA ACEH KE SEKOLAH</h1>
-                <p class="subtitle">LP3I GOES TO SCHOOL - Formulir Pendataan Siswa</p>
-            </header>
-    
-            <form id="lp3iForm" action="#" method="post">
-                <div class="form-section">
-                    <h2 class="section-title">Data Pribadi Siswa</h2>
-                    
-                    <div class="form-row">
-                        <div class="form-label required">Nama Lengkap Siswa</div>
-                        <div class="form-input">
-                            <input type="text" id="nama" name="nama" maxlength="50" required>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1 class="display-4 text-primary">KUNJUNGAN LP3I BANDA ACEH KE SEKOLAH</h1>
+            <p class="lead text-muted">LP3I GOES TO SCHOOL - Formulir Pendataan Siswa</p>
+        </header>
+
+        <form id="lp3iForm" action="#" method="post">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5">Data Pribadi Siswa</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="nama" class="required">Nama Lengkap Siswa</label>
+                        <input type="text" class="form-control" id="nama" name="nama" maxlength="50" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tempat_lahir" class="required">Tempat/Tanggal Lahir</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir" required>
+                            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required>
                         </div>
                     </div>
-    
-                    <div class="form-row">
-                        <div class="form-label required">Tempat/Tanggal Lahir</div>
-                        <div class="form-input">
-                            <div class="date-group">
-                                <input type="text" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir" required>
-                                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
-                            </div>
-                        </div>
+
+                    <div class="form-group">
+                        <label for="asal_sekolah" class="required">Asal Sekolah</label>
+                        <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" maxlength="50" required>
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-label required">Asal Sekolah</div>
-                        <div class="form-input">
-                            <input type="text" id="asal_sekolah" name="asal_sekolah" maxlength="50" required>
-                        </div>
+
+                    <div class="form-group">
+                        <label for="jurusan" class="required">Jurusan</label>
+                        <select class="form-control" id="jurusan" name="jurusan" required>
+                            <option value="">-- Pilih Jurusan --</option>
+                            <option value="IPA">IPA</option>
+                            <option value="IPS">IPS</option>
+                            <option value="Bahasa">Bahasa</option>
+                            <option value="TKJ">TKJ</option>
+                            <option value="RPL">RPL</option>
+                            <option value="Multimedia">Multimedia</option>
+                            <option value="Akuntansi">Akuntansi</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
                     </div>
-    
-                    <div class="form-row">
-                        <div class="form-label required">Jurusan</div>
-                        <div class="form-input">
-                            <select id="jurusan" name="jurusan" required>
-                                <option value="">-- Pilih Jurusan --</option>
-                                <option value="IPA">IPA</option>
-                                <option value="IPS">IPS</option>
-                                <option value="Bahasa">Bahasa</option>
-                                <option value="TKJ">TKJ</option>
-                                <option value="RPL">RPL</option>
-                                <option value="Multimedia">Multimedia</option>
-                                <option value="Akuntansi">Akuntansi</option>
-                                <option value="Lainnya">Lainnya</option>
-                            </select>
-                        </div>
+
+                    <div class="form-group">
+                        <label for="kelas" class="required">Kelas</label>
+                        <select class="form-control" id="kelas" name="kelas" required>
+                            <option value="">-- Pilih Kelas --</option>
+                            <option value="X">X (Sepuluh)</option>
+                            <option value="XI">XI (Sebelas)</option>
+                            <option value="XII">XII (Dua Belas)</option>
+                        </select>
                     </div>
-    
-                    <div class="form-row">
-                        <div class="form-label required">Kelas</div>
-                        <div class="form-input">
-                            <select id="kelas" name="kelas" required>
-                                <option value="">-- Pilih Kelas --</option>
-                                <option value="X">X (Sepuluh)</option>
-                                <option value="XI">XI (Sebelas)</option>
-                                <option value="XII">XII (Dua Belas)</option>
-                            </select>
-                        </div>
+
+                    <div class="form-group">
+                        <label for="no_hp" class="required">No HP/WA</label>
+                        <input type="tel" class="form-control" id="no_hp" name="no_hp" maxlength="15" placeholder="Contoh: 08xxxxxxxxxx" required>
                     </div>
-    
-                    <div class="form-row">
-                        <div class="form-label required">No HP/WA</div>
-                        <div class="form-input">
-                            <input type="tel" id="no_hp" name="no_hp" maxlength="15" placeholder="Contoh: 08xxxxxxxxxx" required>
-                        </div>
-                    </div>
-    
-                    <div class="form-row">
-                        <div class="form-label required">Email</div>
-                        <div class="form-input">
-                            <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" maxlength="50" required>
-                        </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email Anda" maxlength="50" required>
                     </div>
                 </div>
-    
-                <div class="form-section">
-                    <h2 class="section-title">Data Presenter</h2>
-                    
-                    <div class="form-row">
-                        <div class="form-label">Nama Presenter</div>
-                        <div class="form-input">
-                            <input type="text" id="nama_presenter" name="nama_presenter" maxlength="50">
-                        </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5">Data Presenter</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="nama_presenter">Nama Presenter</label>
+                        <input type="text" class="form-control" id="nama_presenter" name="nama_presenter" maxlength="50">
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-label">No HP Presenter</div>
-                        <div class="form-input">
-                            <input type="tel" id="hp_presenter" name="hp_presenter" maxlength="15">
-                        </div>
+
+                    <div class="form-group">
+                        <label for="hp_presenter">No HP Presenter</label>
+                        <input type="tel" class="form-control" id="hp_presenter" name="hp_presenter" maxlength="15">
                     </div>
                 </div>
-        
-                <fieldset>
-                    <legend>Kuesioner Singkat</legend>
-    
-                    <div class="question">
-                        <p class="question-text">1. Media sosial apa yang kamu gunakan?</p>
-                        <div class="options">
-                            <div class="option-item">
-                                <input type="checkbox" name="media" id="ig" value="Instagram">
-                                <label for="ig">Instagram</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="checkbox" name="media" id="ti" value="Tiktok">
-                                <label for="ti">Tiktok</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="checkbox" name="media" id="fb" value="Facebook">
-                                <label for="fb">Facebook</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="checkbox" name="media" id="tw" value="Twitter">
-                                <label for="tw">Twitter</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="checkbox" name="media" id="yt" value="Youtube">
-                                <label for="yt">Youtube</label>
-                            </div>
-                        </div>
-                        <div class="other-option">
-                            <label for="media_lain">Lainnya:</label>
-                            <input type="text" id="media_lain" name="media_lain" placeholder="Sebutkan media sosial lainnya...">
-                        </div>
+            </div>
+
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto">Kuesioner Singkat</legend>
+
+                <div class="form-group">
+                    <label class="question-text">1. Media sosial apa yang kamu gunakan?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="media" id="ig" value="Instagram">
+                        <label class="form-check-label" for="ig">Instagram</label>
                     </div>
-    
-                    <div class="question">
-                        <p class="question-text">2. Dalam sehari, berapa lama kamu habiskan untuk bermedia sosial?</p>
-                        <div class="options">
-                            <div class="option-item">
-                                <input type="radio" name="waktu" id="waktu1" value="1 Jam">
-                                <label for="waktu1">1 Jam</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="radio" name="waktu" id="waktu2" value="1-3 Jam">
-                                <label for="waktu2">1-3 Jam</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="radio" name="waktu" id="waktu3" value="3-5 Jam">
-                                <label for="waktu3">3-5 Jam</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="radio" name="waktu" id="waktu4" value=">5 Jam">
-                                <label for="waktu4">>5 Jam</label>
-                            </div>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="media" id="ti" value="Tiktok">
+                        <label class="form-check-label" for="ti">Tiktok</label>
                     </div>
-    
-                    <div class="question">
-                        <p class="question-text">3. Media sosial apa yang paling sering kamu gunakan?</p>
-                        <div class="options">
-                            <div class="option-item">
-                                <input type="radio" name="sering" id="im" value="Instagram">
-                                <label for="im">Instagram</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="radio" name="sering" id="tk" value="Tiktok">
-                                <label for="tk">Tiktok</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="radio" name="sering" id="fk" value="Facebook">
-                                <label for="fk">Facebook</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="radio" name="sering" id="tr" value="Twitter">
-                                <label for="tr">Twitter</label>
-                            </div>
-                            <div class="option-item">
-                                <input type="radio" name="sering" id="yb" value="Youtube">
-                                <label for="yb">Youtube</label>
-                            </div>
-                        </div>
-                        <div class="other-option">
-                            <label for="sering_lain">Lainnya:</label>
-                            <input type="text" id="sering_lain" name="sering_lain" placeholder="Sebutkan media sosial lainnya...">
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="media" id="fb" value="Facebook">
+                        <label class="form-check-label" for="fb">Facebook</label>
                     </div>
-                </fieldset>
-    
-                <div class="btn-container">
-                    <button type="reset" class="btn btn-reset">Reset</button>
-                    <button type="submit" class="btn">Kirim Data</button>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="media" id="tw" value="Twitter">
+                        <label class="form-check-label" for="tw">Twitter</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="media" id="yt" value="Youtube">
+                        <label class="form-check-label" for="yt">Youtube</label>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="media_lain">Lainnya:</label>
+                        <input type="text" class="form-control" id="media_lain" name="media_lain" placeholder="Sebutkan media sosial lainnya...">
+                    </div>
                 </div>
-            </form>
-    
-            <footer>
-                <p>© 2025 LP3I Banda Aceh - Program LP3I Goes to School</p>
-            </footer>
-        </div>
-    
-        <script>
-            // Validasi form sebelum submit
-            document.getElementById('lp3iForm').addEventListener('submit', function(e) {
-                const namaValue = document.getElementById('nama').value.trim();
-                const emailValue = document.getElementById('email').value.trim();
-                const nohpValue = document.getElementById('no_hp').value.trim();
-                
-                // Validasi nama
-                if (namaValue.length < 3) {
-                    alert('Nama harus diisi minimal 3 karakter!');
-                    e.preventDefault();
-                    return;
-                }
-                
-                // Validasi nomor HP
-                if (!/^08[0-9]{8,13}$/.test(nohpValue)) {
-                    alert('Nomor HP harus diawali dengan 08 dan terdiri dari 10-15 digit!');
-                    e.preventDefault();
-                    return;
-                }
-                
-                // Validasi email
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
-                    alert('Format email tidak valid!');
-                    e.preventDefault();
-                    return;
-                }
-            });
-        </script>
-    </body>
-    </html>
+
+                <div class="form-group">
+                    <label class="question-text">2. Dalam sehari, berapa lama kamu habiskan untuk bermedia sosial?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="waktu" id="waktu1" value="1 Jam">
+                        <label class="form-check-label" for="waktu1">1 Jam</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="waktu" id="waktu2" value="1-3 Jam">
+                        <label class="form-check-label" for="waktu2">1-3 Jam</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="waktu" id="waktu3" value="3-5 Jam">
+                        <label class="form-check-label" for="waktu3">3-5 Jam</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="waktu" id="waktu4" value=">5 Jam">
+                        <label class="form-check-label" for="waktu4">>5 Jam</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question-text">3. Media sosial apa yang paling sering kamu gunakan?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sering" id="im" value="Instagram">
+                        <label class="form-check-label" for="im">Instagram</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sering" id="tk" value="Tiktok">
+                        <label class="form-check-label" for="tk">Tiktok</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sering" id="fk" value="Facebook">
+                        <label class="form-check-label" for="fk">Facebook</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sering" id="tr" value="Twitter">
+                        <label class="form-check-label" for="tr">Twitter</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sering" id="yb" value="Youtube">
+                        <label class="form-check-label" for="yb">Youtube</label>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="sering_lain">Lainnya:</label>
+                        <input type="text" class="form-control" id="sering_lain" name="sering_lain" placeholder="Sebutkan media sosial lainnya...">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="text-center">
+                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="submit" class="btn btn-primary">Kirim Data</button>
+            </div>
+        </form>
+
+        <footer class="text-center mt-4">
+            <p class="text-muted">© 2025 LP3I Banda Aceh - Program LP3I Goes to School</p>
+        </footer>
+    </div>
+
 </body>
 </html>
